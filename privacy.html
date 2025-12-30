@@ -5,24 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politique de Confidentialité - Yélim</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
-        .container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #34495e; margin-top: 30px; }
-        ul { margin-bottom: 20px; }
-        li { margin-bottom: 10px; }
-        .last-update { color: #7f8c8d; font-style: italic; font-size: 0.9em; margin-bottom: 30px; }
-        @media (max-width: 600px) { body { padding: 10px; } .container { padding: 20px; } }
+        /* Reset et style de base */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Conteneur principal (le document) */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Titres */
+        h1 {
+            color: #1a202c;
+            font-size: 28px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #2c5282; /* Un bleu professionnel */
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #4a5568;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Paragraphes et Listes */
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #2d3748;
+        }
+
+        /* Date de mise à jour */
+        .last-update {
+            color: #718096;
+            font-style: italic;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+
+        /* Liens contact */
+        .contact-info li {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        /* Adaptation Mobile */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>Politique de Confidentialité</h1>
-        <p class="last-update">Dernière mise à jour : [DATE]</p>
+        <p class="last-update">Dernière mise à jour : <strong>30 Décembre 2025</strong></p> <h2>1. Introduction</h2>
+        <p>Bienvenue sur <strong>Yélim</strong>. La protection de vos données personnelles est une priorité pour nous. Cette politique de confidentialité explique comment nous traitons vos informations dans le cadre de l'utilisation de notre application de e-commerce au Burkina Faso.</p>
 
-        <h2>1. Introduction</h2>
-        <p>Bienvenue sur Yélim...</p>
-        
-        </div>
+        <h2>2. Les Données que nous collectons</h2>
+
+        <h3>2.1. Informations fournies volontairement</h3>
+        <ul>
+            <li><strong>Compte et Livraison :</strong> Nom, numéro de téléphone, adresse de livraison.</li>
+            <li><strong>Contenu :</strong> Photos (pour la recherche ou le profil), avis clients.</li>
+        </ul>
+
+        <h3>2.2. Informations techniques et d'usage</h3>
+        <p>Pour assurer le bon fonctionnement de l'application, nous collectons des données techniques standards telles que le type d'appareil, le système d'exploitation et des statistiques d'utilisation anonymes (pages visitées, erreurs de l'application).</p>
+
+        <h3>2.3. Accès aux fonctionnalités (Permissions)</h3>
+        <ul>
+            <li><strong>Caméra et Photos :</strong> L'accès à votre caméra ou galerie est requis uniquement si vous souhaitez utiliser la fonctionnalité de recherche par image. Les images sont traitées de manière sécurisée pour identifier les produits correspondants et ne sont pas utilisées à d'autres fins.</li>
+        </ul>
+
+        <h2>3. Utilisation de vos données</h2>
+        <p>Vos données sont utilisées exclusivement pour :</p>
+        <ul>
+            <li>Traiter et livrer vos commandes.</li>
+            <li>Assurer le support client.</li>
+            <li>Améliorer la sécurité et prévenir la fraude.</li>
+            <li>Vous proposer des produits pertinents via nos algorithmes de recherche.</li>
+            <li>Vous informer sur le statut de vos transactions.</li>
+        </ul>
+
+        <h2>4. Partage des données</h2>
+        <p>Nous ne vendons pas vos données. Elles ne sont partagées qu'avec les tiers strictement nécessaires au service :</p>
+        <ul>
+            <li><strong>Hébergement et Infrastructure :</strong> Vos données sont stockées de manière chiffrée sur des serveurs sécurisés fournis par des leaders mondiaux du cloud computing, respectant les normes de sécurité internationales (ISO 27001).</li>
+            <li><strong>Paiement Mobile :</strong> Les transactions (Orange Money, Moov Money, Wave) sont gérées directement par les opérateurs concernés. Yélim n'a jamais accès à vos codes secrets.</li>
+            <li><strong>Logistique :</strong> Les informations nécessaires à la livraison (Nom, Téléphone, Lieu) sont transmises aux livreurs partenaires.</li>
+        </ul>
+
+        <h2>5. Sécurité des données</h2>
+        <p>Nous appliquons des mesures de sécurité strictes pour protéger vos informations, incluant le chiffrement des communications (HTTPS) et des protocoles d'authentification sécurisés. L'accès aux données est restreint au personnel autorisé uniquement.</p>
+
+        <h2>6. Vos droits et Suppression de compte</h2>
+        <p>Conformément à la législation en vigueur, vous disposez d'un droit d'accès, de rectification et de suppression de vos données.</p>
+        <p><strong>Suppression de compte :</strong> Vous pouvez demander la suppression définitive de votre compte directement depuis les paramètres de l'application ou en contactant notre support.</p>
+
+        <h2>7. Contact</h2>
+        <p>Pour toute question :</p>
+        <ul class="contact-info">
+            <li>📧 <strong>E-mail :</strong> support@yelim.bf</li> <li>📍 <strong>Adresse :</strong> Ouagadougou, Burkina Faso</li>
+        </ul>
+    </div>
+
 </body>
 </html>
