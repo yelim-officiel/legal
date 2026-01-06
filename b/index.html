@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voir l'article - Yélim</title>
+    
+    <!-- Open Graph pour preview WhatsApp/Facebook -->
+    <meta property="og:title" content="🛍️ Découvrez cet article sur Yélim">
+    <meta property="og:description" content="Achetez en ligne avec livraison rapide au Burkina Faso">
+    <meta property="og:image" content="https://yelim-officiel.github.io/legal/assets/og-image.png">
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="Yélim">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Découvrez cet article sur Yélim">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 28px;
+            text-align: center;
+            max-width: 380px;
+            width: 100%;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+        }
+        
+        .logo {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 18px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+        }
+        
+        h1 {
+            color: #1f2937;
+            font-size: 22px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        p {
+            color: #6b7280;
+            margin-bottom: 24px;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 12px;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: scale(1.02);
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: #9ca3af;
+            font-size: 13px;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e5e7eb;
+        }
+        
+        .divider span {
+            padding: 0 12px;
+        }
+        
+        .stores {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .store-btn {
+            flex: 1;
+            padding: 14px 12px;
+            border-radius: 12px;
+            background: #f3f4f6;
+            text-decoration: none;
+            color: #374151;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        
+        .store-btn:hover {
+            background: #e5e7eb;
+        }
+        
+        .status {
+            color: #9ca3af;
+            font-size: 13px;
+            margin-top: 16px;
+            min-height: 20px;
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #e5e7eb;
+            border-top-color: #6366f1;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo">🛍️</div>
+        <h1>Voir cet article</h1>
+        <p>Appuyez sur le bouton ci-dessous pour ouvrir l'article dans l'application Yélim.</p>
+        
+        <a href="#" id="openApp" class="btn btn-primary">
+            Ouvrir dans Yélim
+        </a>
+        
+        <div class="divider">
+            <span>Pas encore l'application ?</span>
+        </div>
+        
+        <div class="stores">
+            <a href="https://play.google.com/store/apps/details?id=com.s1.yelim" class="store-btn" id="playStore">
+                ▶️ Android
+            </a>
+            <a href="https://apps.apple.com/app/yelim/id6aborné504501702" class="store-btn" id="appStore">
+                🍎 iPhone
+            </a>
+        </div>
+        
+        <p class="status" id="status"></p>
+    </div>
+
+    <script>
+        (function() {
+            // Extraire l'ID de l'article depuis l'URL
+            const path = window.location.pathname;
+            const params = new URLSearchParams(window.location.search);
+            
+            let articleId = params.get('id');
+            
+            // Si pas de param ?id=, prendre le segment après /a/
+            if (!articleId) {
+                const match = path.match(/\/a\/([^\/]+)/);
+                if (match) {
+                    articleId = match[1];
+                }
+            }
+            
+            // Éléments DOM
+            const openBtn = document.getElementById('openApp');
+            const status = document.getElementById('status');
+            
+            if (!articleId) {
+                status.textContent = "Lien invalide";
+                openBtn.classList.add('hidden');
+                return;
+            }
+            
+            // Construire le deep link
+            const deepLink = 'yelim://article/' + articleId;
+            openBtn.href = deepLink;
+            
+            // Détecter la plateforme
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            const isAndroid = /Android/.test(navigator.userAgent);
+            
+            // Fonction pour tenter d'ouvrir l'app
+            function tryOpenApp() {
+                status.innerHTML = '<span class="spinner"></span>Ouverture...';
+                
+                const start = Date.now();
+                
+                // Créer un iframe invisible pour ouvrir le deep link
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.src = deepLink;
+                document.body.appendChild(iframe);
+                
+                // Aussi essayer avec window.location
+                setTimeout(function() {
+                    window.location.href = deepLink;
+                }, 100);
+                
+                // Vérifier si on est toujours sur la page après 2.5s
+                setTimeout(function() {
+                    document.body.removeChild(iframe);
+                    
+                    if (document.hidden || document.webkitHidden) {
+                        // L'app s'est ouverte
+                        status.textContent = "";
+                    } else {
+                        // L'app ne s'est pas ouverte
+                        status.textContent = "Installez l'application pour voir l'article";
+                        
+                        // Rediriger vers le store approprié
+                        if (isAndroid) {
+                            // Ne pas rediriger auto, laisser l'utilisateur choisir
+                        } else if (isIOS) {
+                            // Ne pas rediriger auto
+                        }
+                    }
+                }, 2500);
+            }
+            
+            // Tenter d'ouvrir automatiquement sur mobile
+            if (isIOS || isAndroid) {
+                setTimeout(tryOpenApp, 300);
+            } else {
+                status.textContent = "Scannez ce lien depuis votre téléphone";
+            }
+            
+            // Click manuel sur le bouton
+            openBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                tryOpenApp();
+            });
+            
+        })();
+    </script>
+</body>
+</html>
