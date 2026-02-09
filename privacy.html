@@ -15,7 +15,7 @@
             padding: 20px;
         }
 
-        /* Conteneur principal (le document) */
+        /* Conteneur principal */
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -31,31 +31,36 @@
             font-size: 28px;
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 15px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
         
         h2 {
-            color: #2c5282; /* Un bleu professionnel */
+            color: #007AFF; /* Bleu Yélim */
             font-size: 20px;
-            margin-top: 30px;
+            margin-top: 35px;
             margin-bottom: 15px;
+            border-left: 4px solid #007AFF;
+            padding-left: 10px;
         }
 
         h3 {
-            color: #4a5568;
-            font-size: 16px;
-            margin-top: 20px;
+            color: #2d3748;
+            font-size: 17px;
+            margin-top: 25px;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         /* Paragraphes et Listes */
         p {
             margin-bottom: 15px;
+            color: #4a5568;
         }
 
         ul {
             padding-left: 20px;
             margin-bottom: 15px;
+            color: #4a5568;
         }
 
         li {
@@ -72,25 +77,24 @@
             font-style: italic;
             font-size: 0.9em;
             margin-bottom: 30px;
+            background-color: #edf2f7;
+            padding: 10px;
+            border-radius: 6px;
+            display: inline-block;
         }
 
         /* Liens contact */
         .contact-info li {
             list-style-type: none;
             padding-left: 0;
+            margin-bottom: 10px;
         }
 
         /* Adaptation Mobile */
         @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            .container {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 24px;
-            }
+            body { padding: 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 24px; }
         }
     </style>
 </head>
@@ -98,54 +102,65 @@
 
     <div class="container">
         <h1>Politique de Confidentialité</h1>
-        <p class="last-update">Dernière mise à jour : <strong>30 Décembre 2025</strong></p> <h2>1. Introduction</h2>
-        <p>Bienvenue sur <strong>Yélim</strong>. La protection de vos données personnelles est une priorité pour nous. Cette politique de confidentialité explique comment nous traitons vos informations dans le cadre de l'utilisation de notre application de e-commerce au Burkina Faso.</p>
+        <p class="last-update">Dernière mise à jour : <strong>Février 2026</strong></p>
+
+        <h2>1. Introduction</h2>
+        <p>Bienvenue sur <strong>Yélim</strong>. La protection de vos données personnelles est une priorité absolue pour nous. Cette politique de confidentialité détaille en toute transparence comment nous collectons, utilisons et protégeons vos informations lors de l'utilisation de notre application de e-commerce.</p>
 
         <h2>2. Les Données que nous collectons</h2>
 
         <h3>2.1. Informations fournies volontairement</h3>
         <ul>
-            <li><strong>Compte et Livraison :</strong> Nom, numéro de téléphone, adresse de livraison.</li>
-            <li><strong>Contenu :</strong> Photos (pour la recherche ou le profil), avis clients.</li>
+            <li><strong>Informations de compte :</strong> Nom, prénoms, numéro de téléphone (pour l'authentification et le contact).</li>
+            <li><strong>Informations de livraison :</strong> Ville, quartier, indications de lieu.</li>
+            <li><strong>Contenu utilisateur :</strong> Photos téléchargées pour la recherche visuelle ou les avis produits.</li>
         </ul>
 
-        <h3>2.2. Informations techniques et d'usage</h3>
-        <p>Pour assurer le bon fonctionnement de l'application, nous collectons des données techniques standards telles que le type d'appareil, le système d'exploitation et des statistiques d'utilisation anonymes (pages visitées, erreurs de l'application).</p>
+        <h3>2.2. Informations techniques</h3>
+        <p>Pour assurer la stabilité de l'application, nous collectons des données techniques anonymes telles que le modèle de l'appareil, la version du système d'exploitation et les rapports de crash.</p>
 
-        <h3>2.3. Accès aux fonctionnalités (Permissions)</h3>
+        <h3>2.3. Accès à la Caméra et à la Galerie</h3>
+        <p>L'accès à votre caméra ou à votre galerie photo est requis <strong>uniquement</strong> si vous utilisez la fonctionnalité de "Recherche par image". Ces images sont traitées instantanément pour trouver des produits correspondants et ne sont pas conservées à d'autres fins.</p>
+
+        <h3>2.4. Données de Localisation (GPS)</h3>
+        <p>Nous collectons vos données de localisation précise (coordonnées GPS) <strong>uniquement lorsque vous utilisez activement</strong> la fonctionnalité "Envoyer ma position actuelle" lors de la définition de votre adresse de livraison.</p>
+        <p><strong>Important :</strong></p>
         <ul>
-            <li><strong>Caméra et Photos :</strong> L'accès à votre caméra ou galerie est requis uniquement si vous souhaitez utiliser la fonctionnalité de recherche par image. Les images sont traitées de manière sécurisée pour identifier les produits correspondants et ne sont pas utilisées à d'autres fins.</li>
+            <li>Cette collecte n'est activée que par votre action explicite (clic sur le bouton).</li>
+            <li>Nous ne suivons <strong>jamais</strong> votre position en arrière-plan lorsque l'application est fermée.</li>
+            <li>Ces données servent exclusivement à garantir que le livreur trouve votre emplacement exact.</li>
         </ul>
 
         <h2>3. Utilisation de vos données</h2>
-        <p>Vos données sont utilisées exclusivement pour :</p>
+        <p>Vos données sont utilisées exclusivement pour les finalités suivantes :</p>
         <ul>
-            <li>Traiter et livrer vos commandes.</li>
-            <li>Assurer le support client.</li>
-            <li>Améliorer la sécurité et prévenir la fraude.</li>
-            <li>Vous proposer des produits pertinents via nos algorithmes de recherche.</li>
-            <li>Vous informer sur le statut de vos transactions.</li>
+            <li><strong>Traitement des commandes :</strong> Valider et préparer vos achats.</li>
+            <li><strong>Livraison :</strong> Guider le livreur vers votre emplacement précis grâce aux coordonnées GPS fournies.</li>
+            <li><strong>Support client :</strong> Vous contacter en cas de problème avec une commande.</li>
+            <li><strong>Sécurité :</strong> Vérifier les transactions pour prévenir la fraude.</li>
         </ul>
 
-        <h2>4. Partage des données</h2>
-        <p>Nous ne vendons pas vos données. Elles ne sont partagées qu'avec les tiers strictement nécessaires au service :</p>
+        <h2>4. Partage des données avec des tiers</h2>
+        <p>Nous ne vendons aucune donnée personnelle. Vos informations sont partagées uniquement avec les prestataires nécessaires au fonctionnement du service :</p>
         <ul>
-            <li><strong>Hébergement et Infrastructure :</strong> Vos données sont stockées de manière chiffrée sur des serveurs sécurisés fournis par des leaders mondiaux du cloud computing, respectant les normes de sécurité internationales (ISO 27001).</li>
-            <li><strong>Paiement Mobile :</strong> Les transactions (Orange Money, Moov Money, Wave) sont gérées directement par les opérateurs concernés. Yélim n'a jamais accès à vos codes secrets.</li>
-            <li><strong>Logistique :</strong> Les informations nécessaires à la livraison (Nom, Téléphone, Lieu) sont transmises aux livreurs partenaires.</li>
+            <li><strong>Logistique et Livreurs :</strong> Votre nom, numéro de téléphone et vos <strong>coordonnées GPS</strong> sont transmis au livreur assigné à votre commande afin d'assurer la livraison.</li>
+            <li><strong>Services de Cartographie :</strong> Pour afficher votre position sur la carte dans l'application, nous utilisons les services de <strong>Google Maps</strong> (Android) et <strong>Apple Maps</strong> (iOS). Ces services reçoivent temporairement vos coordonnées pour générer l'affichage cartographique, conformément à leurs propres politiques de confidentialité.</li>
+            <li><strong>Paiement Mobile :</strong> Les transactions financières (via Orange Money, Moov Money, Wave, Sank, etc.) sont traitées directement par les applications ou services de ces opérateurs. Yélim n'a pas accès à vos informations bancaires sensibles.</li>
+            <li><strong>Hébergement Cloud :</strong> Vos données sont stockées de manière sécurisée sur des infrastructures cloud certifiées (ex: Google Cloud / Firebase).</li>
         </ul>
 
         <h2>5. Sécurité des données</h2>
-        <p>Nous appliquons des mesures de sécurité strictes pour protéger vos informations, incluant le chiffrement des communications (HTTPS) et des protocoles d'authentification sécurisés. L'accès aux données est restreint au personnel autorisé uniquement.</p>
+        <p>Nous appliquons des standards de sécurité rigoureux. Toutes les communications entre l'application et nos serveurs sont chiffrées (protocole HTTPS/TLS). L'accès aux bases de données est strictement restreint au personnel technique autorisé.</p>
 
         <h2>6. Vos droits et Suppression de compte</h2>
-        <p>Conformément à la législation en vigueur, vous disposez d'un droit d'accès, de rectification et de suppression de vos données.</p>
-        <p><strong>Suppression de compte :</strong> Vous pouvez demander la suppression définitive de votre compte directement depuis les paramètres de l'application ou en contactant notre support.</p>
+        <p>Conformément aux réglementations en vigueur, vous disposez d'un droit d'accès, de modification et de suppression de vos données.</p>
+        <p><strong>Suppression des données :</strong> Vous pouvez demander la suppression complète de votre compte et de toutes les données associées directement depuis les paramètres de l'application ("Profil" > "Supprimer mon compte") ou en nous contactant.</p>
 
         <h2>7. Contact</h2>
-        <p>Pour toute question :</p>
+        <p>Pour toute question concernant cette politique ou vos données personnelles, vous pouvez nous contacter :</p>
         <ul class="contact-info">
-            <li>📧 <strong>E-mail :</strong> support@yelim.bf</li> <li>📍 <strong>Adresse :</strong> Ouagadougou, Burkina Faso</li>
+            <li>📧 <strong>E-mail :</strong> support@yelim.bf</li>
+            <li>📍 <strong>Adresse :</strong> Ouagadougou, Burkina Faso</li>
         </ul>
     </div>
 
